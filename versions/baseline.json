@@ -49,8 +49,8 @@
       "port-version": 0
     },
     "carbon-core": {
-      "baseline": "3.1.0",
-      "port-version": 0
+      "baseline": "3.3.0",
+      "port-version": 1
     },
     "carbon-d3dinfo": {
       "baseline": "2.0.3",
@@ -110,7 +110,7 @@
     },
     "carbon-math": {
       "baseline": "1.2.2",
-      "port-version": 0
+      "port-version": 1
     },
     "carbon-mesh": {
       "baseline": "1.1.1",
