@@ -1,7 +1,7 @@
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
   URL https://github.com/carbonengine/core.git
-  REF 4acb5c1f2629ec1b00a95398f7715fcc06de2d6f
+  REF 6d15b4aed16d82469635c2287f26edfa497170b8
   HEAD_REF main
 )
 
@@ -26,3 +26,4 @@ vcpkg_cmake_install()
 vcpkg_cmake_config_fixup()
 vcpkg_copy_pdbs()
 ccp_externalize_apple_debuginfo()
+vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE.txt")
