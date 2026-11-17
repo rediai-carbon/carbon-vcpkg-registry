@@ -1,0 +1,11 @@
+diff --git a/include/CcpLog.h b/include/CcpLog.h
+--- a/include/CcpLog.h
++++ b/include/CcpLog.h
+@@ -5,6 +5,7 @@
+ #define CCP_LOG_H
+ 
+ #include <cstdarg>
++#include <cstdint>
+ #include <stdexcept>
+ #include "carbon_core_export.h"
+ 

@@ -3,6 +3,8 @@ vcpkg_from_git(
   URL https://github.com/carbonengine/core.git
   REF e49c14a0b4a30d656768fa1e0ff559b3c16a9817
   HEAD_REF main
+  PATCHES
+    cstdint.patch
 )
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
