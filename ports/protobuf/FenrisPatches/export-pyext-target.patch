@@ -61,7 +61,7 @@ new file mode 100644
 index 000000000..281919d22
 --- /dev/null
 +++ b/cmake/pyext.cmake
-@@ -0,0 +1,30 @@
+@@ -0,0 +1,31 @@
 +cmake_policy(SET CMP0057 NEW)
 +cmake_policy(SET CMP0074 NEW)
 +
@@ -74,6 +74,7 @@ index 000000000..281919d22
 +  ${pyext_dir}/*.cc
 +  ${pyext_dir}/*.h
 +)
++list(APPEND pyext_files ${CMAKE_CURRENT_SOURCE_DIR}/python/google/protobuf/proto_api.cc)
 +
 +file(GLOB_RECURSE pyext_headers
 +  LIST_DIRECTORIES false
