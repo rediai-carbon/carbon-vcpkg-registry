@@ -23,8 +23,8 @@ diff --git a/base/strings/utf_string_conversion_utils.h b/base/strings/utf_strin
 diff --git a/base/sys_byteorder.h b/base/sys_byteorder.h
 --- a/base/sys_byteorder.h
 +++ b/base/sys_byteorder.h
-@@ -5,6 +5,7 @@
- #ifndef MINI_CHROMIUM_BASE_SYS_BYTEORDER_H_
+@@ -5,5 +5,6 @@
+#ifndef MINI_CHROMIUM_BASE_SYS_BYTEORDER_H_
  #define MINI_CHROMIUM_BASE_SYS_BYTEORDER_H_
 
 +#include <stdint.h>
