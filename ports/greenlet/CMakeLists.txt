@@ -33,11 +33,19 @@ set_target_properties(_greenlet
 
 target_compile_options(_greenlet PRIVATE ${EXTRA_COMPILE_OPTIONS})
 
-target_link_libraries(_greenlet
-    PRIVATE
-        Python3::Python
-        "${EXTRA_LINK_LIBRARIES}"
-)
+if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
+    # The host interpreter owns the one Python runtime.
+    target_include_directories(_greenlet PRIVATE ${Python3_INCLUDE_DIRS})
+    if(EXTRA_LINK_LIBRARIES)
+        target_link_libraries(_greenlet PRIVATE "${EXTRA_LINK_LIBRARIES}")
+    endif()
+else()
+    target_link_libraries(_greenlet
+        PRIVATE
+            Python3::Python
+            "${EXTRA_LINK_LIBRARIES}"
+    )
+endif()
 
 target_include_directories(_greenlet INTERFACE
         $<INSTALL_INTERFACE:include>
