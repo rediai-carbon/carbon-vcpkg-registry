@@ -13,8 +13,8 @@ endif()
 
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
-  URL git@github.com:carbonengine/exefile.git
-  REF abeacdaccde0b80a74e61903843756be9e628c6d
+  URL https://github.com/rediai-carbon/carbon-exefile.git
+  REF ad0f25965b86ae1285a566577df3f31fa165d470
   HEAD_REF main
 )
 

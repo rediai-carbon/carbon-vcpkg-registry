@@ -7,6 +7,7 @@ vcpkg_from_git(
     REF db9863a2177a2b3d329bc31fb307302b80b00dd0
     PATCHES
         dot_gn_python_exe.patch
+        linux-thread-memset.patch
 )
 
 
@@ -44,6 +45,7 @@ checkout_in_path(
     PATCHES 
         2to3_win_helper_py.patch
         2to3_find_mac_sdk_py.patch
+        mini-chromium-stdint.patch
 )
 
 function(replace_gn_dependency INPUT_FILE OUTPUT_FILE LIBRARY_NAMES)
@@ -75,6 +77,14 @@ replace_gn_dependency(
     "${CMAKE_CURRENT_LIST_DIR}/zlib.gn"
     "${SOURCE_PATH}/third_party/zlib/BUILD.gn"
     "z;zlib;zlibd"
+)
+
+# Crashpad's DEPS file names this checkout. The port previously compiled the
+# Linux syscall users without it.
+checkout_in_path(
+    "${SOURCE_PATH}/third_party/lss/lss"
+    "https://chromium.googlesource.com/linux-syscall-support"
+    "7bde79cc274d06451bf65ae82c012a5d3e476b5a"
 )
 
 set(OPTIONS_DBG "is_debug=true")
