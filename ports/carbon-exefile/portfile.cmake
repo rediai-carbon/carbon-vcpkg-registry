@@ -18,10 +18,17 @@ vcpkg_from_git(
   HEAD_REF main
 )
 
+set(EXEFILE_OPTIONS "")
+# The v145 triplet sets CARBON_BUILD_TYPE. The host triplet does not, and an
+# empty -DCMAKE_BUILD_TYPE= overrides vcpkg's Debug/Release selection.
+if(DEFINED CARBON_BUILD_TYPE AND NOT CARBON_BUILD_TYPE STREQUAL "")
+  list(APPEND EXEFILE_OPTIONS "-DCMAKE_BUILD_TYPE=${CARBON_BUILD_TYPE}")
+endif()
+
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
   OPTIONS
-    -DCMAKE_BUILD_TYPE=${CARBON_BUILD_TYPE}
+    ${EXEFILE_OPTIONS}
 )
 
 vcpkg_cmake_install()
