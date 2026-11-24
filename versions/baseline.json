@@ -42,7 +42,7 @@
     },
     "carbon-blueexposure": {
       "baseline": "2.2.0",
-      "port-version": 0
+      "port-version": 1
     },
     "carbon-controls": {
       "baseline": "1.0.0",
@@ -102,7 +102,7 @@
     },
     "carbon-io": {
       "baseline": "1.5.0",
-      "port-version": 0
+      "port-version": 1
     },
     "carbon-localization": {
       "baseline": "2.2.1",
@@ -126,11 +126,11 @@
     },
     "carbon-pdm": {
       "baseline": "2.3.0",
-      "port-version": 0
+      "port-version": 1
     },
     "carbon-pdmprotowrapper": {
       "baseline": "3.1.0",
-      "port-version": 0
+      "port-version": 1
     },
     "carbon-prometheus": {
       "baseline": "4.1.3",
