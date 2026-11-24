@@ -166,7 +166,7 @@
     },
     "crashpad": {
       "baseline": "2021-04-14",
-      "port-version": 3
+      "port-version": 4
     },
     "fxc": {
       "baseline": "10.1",
