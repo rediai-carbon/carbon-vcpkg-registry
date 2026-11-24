@@ -1,6 +1,7 @@
 {
   "name": "carbon-io",
   "version": "1.5.0",
+  "port-version": 1,
   "description": "carbon-io is a drop-in replacement for the python312 socket module",
   "dependencies": [
     {
