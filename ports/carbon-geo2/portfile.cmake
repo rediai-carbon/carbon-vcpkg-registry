@@ -1,7 +1,9 @@
+set(VCPKG_POLICY_EMPTY_INCLUDE_FOLDER enabled)
+
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
   URL https://github.com/rediai-carbon/carbon-geo2.git
-  REF 2739a89387faa0221cee0918396bbf24a899f9c9
+  REF ef7963dd563592e25f3e3676d5d2910e2a7fc2a3
   HEAD_REF main
 )
 
@@ -17,6 +19,7 @@ vcpkg_cmake_configure(
 vcpkg_cmake_install()
 
 vcpkg_cmake_config_fixup()
+vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE.md")
 set(BUILD_PATHS
         "${CURRENT_PACKAGES_DIR}/bin/*.pyd"
         "${CURRENT_PACKAGES_DIR}/debug/bin/*.pyd"
