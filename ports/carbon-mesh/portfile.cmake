@@ -1,7 +1,7 @@
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
   URL https://github.com/rediai-carbon/carbon-mesh.git
-  REF 43b6e6853c0fc644f80b83385e4eccfe49c80383
+  REF eab4b4b29ea6e115f57610a5337f50d4d605ee87
   HEAD_REF main
 )
 
