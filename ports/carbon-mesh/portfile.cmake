@@ -14,6 +14,7 @@ vcpkg_cmake_configure(
   -DVCPKG_USE_HOST_TOOLS=ON
   -DVCPKG_HOST_TRIPLET=${HOST_TRIPLET}
   -DCMAKE_BUILD_TYPE=${CARBON_BUILD_TYPE}
+  "-DCMAKE_CXX_FLAGS=-Wno-error=unused-but-set-variable -Wno-error=sign-compare"
 )
 
 vcpkg_cmake_install()
