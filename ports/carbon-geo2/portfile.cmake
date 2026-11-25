@@ -1,7 +1,7 @@
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
-  URL git@github.com:carbonengine/geo2.git
-  REF 3165fce11bc818ca469f14b15ca496087fafdaa6
+  URL https://github.com/rediai-carbon/carbon-geo2.git
+  REF 2739a89387faa0221cee0918396bbf24a899f9c9
   HEAD_REF main
 )
 
