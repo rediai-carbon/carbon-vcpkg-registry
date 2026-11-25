@@ -1,7 +1,7 @@
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
-  URL git@github.com:carbonengine/parser.git
-  REF b58a68538fe4ae63b3854b391744b86f561b901b
+  URL https://github.com/rediai-carbon/carbon-parser.git
+  REF 110b787bf4151b7b08fddd6b8b79aef0c1deb2c1
   HEAD_REF main
 )
 
@@ -18,5 +18,6 @@ vcpkg_cmake_configure(
 vcpkg_cmake_install()
 
 vcpkg_cmake_config_fixup()
+vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE.md")
 vcpkg_copy_pdbs()
 ccp_externalize_apple_debuginfo()

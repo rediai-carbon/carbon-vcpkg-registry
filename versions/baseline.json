@@ -118,7 +118,7 @@
     },
     "carbon-parser": {
       "baseline": "1.0.2",
-      "port-version": 0
+      "port-version": 1
     },
     "carbon-pathfinder": {
       "baseline": "3.0.1",
