@@ -1,8 +1,14 @@
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
-  URL git@github.com:carbonengine/imageio.git
-  REF 88d14adcd83033b57df99d7b8629169236e02abf
+  URL https://github.com/rediai-carbon/carbon-imageio.git
+  REF bd949b9810064818ddc238c998e1563d40ca983b
   HEAD_REF main
+)
+
+vcpkg_check_features(
+  OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+  FEATURES
+    nanovdb CARBON_IMAGEIO_WITH_NANOVDB
 )
 
 vcpkg_cmake_configure(
