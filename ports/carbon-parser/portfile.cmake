@@ -1,7 +1,7 @@
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
   URL https://github.com/rediai-carbon/carbon-parser.git
-  REF 70c4d82f9e71e89704c2f86c39cd6fa3d72b6372
+  REF a15c1d32ad4822442d0901b7d7a8075cb8e44fd4
   HEAD_REF main
 )
 

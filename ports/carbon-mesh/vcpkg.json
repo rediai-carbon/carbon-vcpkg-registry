@@ -2,7 +2,8 @@
   "name": "carbon-mesh",
   "version": "1.1.1",
   "port-version": 1,
-  "description": "Library that handles serialization of 3D mesh, skeleton and animation data. It also provides basic animation runtime support.",
+  "default-features": [],
+  "description": "Library that handles serialization of 3D mesh, skeleton and animation data. Public registry revision is library-only (no tools, no Simplygon).",
   "dependencies": [
     {
       "name": "carbon-math",

@@ -1,9 +1,24 @@
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
   URL https://github.com/rediai-carbon/carbon-mesh.git
-  REF f0a83b41a6eee9c4bd4c81323ff9a63855b39880
+  REF 71a36fcbe6f169f6224b7cb3ac5de6bebd91a784
   HEAD_REF main
 )
+
+vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
+    FEATURES
+        tools                         CARBON_MESH_REQUEST_TOOLS
+        simplygon                     CARBON_MESH_REQUEST_SIMPLYGON
+)
+if(CARBON_MESH_REQUEST_TOOLS)
+    message(FATAL_ERROR
+        "Feature 'tools' is not supported on this port revision. "
+        "Public registry builds are library-only (BUILD_TOOLS=OFF).")
+endif()
+if(CARBON_MESH_REQUEST_SIMPLYGON)
+    message(FATAL_ERROR
+        "Feature 'simplygon' is not supported. Simplygon remains disabled for rights-cleared public consumers.")
+endif()
 
 vcpkg_cmake_configure(
   SOURCE_PATH ${SOURCE_PATH}
@@ -11,10 +26,10 @@ vcpkg_cmake_configure(
   -DBUILD_TESTING=OFF
   -DBUILD_TOOLS=OFF
   -DWITH_SIMPLYGON=OFF
+  ${FEATURE_OPTIONS}
   -DVCPKG_USE_HOST_TOOLS=ON
   -DVCPKG_HOST_TRIPLET=${HOST_TRIPLET}
   -DCMAKE_BUILD_TYPE=${CARBON_BUILD_TYPE}
-  "-DCMAKE_CXX_FLAGS=-Wno-error=unused-but-set-variable -Wno-error=sign-compare"
 )
 
 vcpkg_cmake_install()
