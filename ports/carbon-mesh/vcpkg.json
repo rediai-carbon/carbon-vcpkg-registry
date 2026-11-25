@@ -1,7 +1,9 @@
 {
   "name": "carbon-mesh",
   "version": "1.1.1",
-  "description": "Library that handles serialization of 3D mesh, skeleton and animation data. It also provides basic animation runtime support.",
+  "port-version": 1,
+  "default-features": [],
+  "description": "Library that handles serialization of 3D mesh, skeleton and animation data. Public registry revision is library-only (no tools, no Simplygon).",
   "dependencies": [
     {
       "name": "carbon-math",
@@ -35,62 +37,6 @@
     {
       "name": "vcpkg-cmake-config",
       "host": true
-    }
-  ],
-  "features": {
-    "simplygon": {
-      "description": "Use Simplygon for LOD generation",
-      "dependencies": [
-        {
-          "name": "simplygon",
-          "version>=": "10.4.338"
-        }
-      ]
-    },
-    "tools": {
-      "description": "Build tools",
-      "dependencies": [
-        "cli11",
-        {
-          "name": "glfw3",
-          "version>=": "3.4#1"
-        },
-        "hash-library",
-        {
-          "name": "imgui",
-          "features": [
-            "glfw-binding",
-            "vulkan-binding"
-          ],
-          "version>=": "1.91.9"
-        },
-        {
-          "name": "nlohmann-json",
-          "version>=": "3.12.0"
-        },
-        {
-          "name": "shaderc",
-          "version>=": "2025.2#1"
-        },
-        {
-          "name": "tinyfiledialogs",
-          "version>=": "3.19.1"
-        },
-        {
-          "name": "tinygltf",
-          "version>=": "3.0.0#1"
-        },
-        {
-          "name": "vulkan",
-          "version>=": "2023-12-17"
-        }
-      ]
-    }
-  },
-  "overrides": [
-    {
-      "name": "cli11",
-      "version": "2.4.2"
     }
   ]
 }

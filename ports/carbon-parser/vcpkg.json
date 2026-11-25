@@ -1,6 +1,7 @@
 {
   "name": "carbon-parser",
   "version": "1.0.2",
+  "port-version": 1,
   "dependencies": [
     {
       "name": "ccp-debug-info",
