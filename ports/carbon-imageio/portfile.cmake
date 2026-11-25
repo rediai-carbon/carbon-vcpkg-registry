@@ -1,7 +1,7 @@
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
   URL https://github.com/rediai-carbon/carbon-imageio.git
-  REF 9f89ee2079e61f98ccf1e75b95b3da2db140e0b0
+  REF bd949b9810064818ddc238c998e1563d40ca983b
   HEAD_REF main
 )
 
