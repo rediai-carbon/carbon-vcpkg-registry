@@ -3,7 +3,7 @@ set(VCPKG_POLICY_EMPTY_INCLUDE_FOLDER enabled)
 vcpkg_from_git(
   OUT_SOURCE_PATH SOURCE_PATH
   URL https://github.com/rediai-carbon/carbon-geo2.git
-  REF ef7963dd563592e25f3e3676d5d2910e2a7fc2a3
+  REF 72d8992f2faf2dc65a8a925b952d59bc4368fd8e
   HEAD_REF main
 )
 
